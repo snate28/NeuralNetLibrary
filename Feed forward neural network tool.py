@@ -18,7 +18,7 @@ def backProp(layers, weights, deriv, size, rate = 1):
     weights = weights[::-1]
     new_weights=[]
     #backpopagate
-    new_weights.append(weights[0]+(layers[1].T.dot(derivative*rate))) #this one does not fit well the algorithm inside for loop, so it's outside of it
+    new_weights.append(weights[0]+(layers[1].T.dot(derivative*rate))) #this one does not fit  the algorithm well inside the for loop, so it's outside of it
     for i in range(len(size)-2):
         derivative = derivative.dot(weights[i].T)*deriv[i]
         new_weights.append(weights[i+1]+(layers[i+2].T.dot(derivative*rate)))
