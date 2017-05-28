@@ -1,2 +1,2 @@
-# NeuralNetLibrary
-Trying to create my own library for training neural networks.
+# NeuralNet
+Practicing at coding neural networks.
